@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Soldado</title>
+    <link rel="stylesheet" href="css/menuSuboficial.css">
+</head>
+<body>
+
+<header class="header-menu">
+    <h1>Portal del Soldado</h1>
+    <button id="btn-logout" class="btn btn-danger">Cerrar Sesión</button>
+</header>
+
+<main class="container">
+    <section class="card">
+        <h2>Mis Datos</h2>
+        <div id="datos-soldado">
+            <p><strong>Nombre:</strong> <span id="soldado-nombre">Cargando...</span></p>
+            <p><strong>Rol:</strong> <span id="soldado-rol">Cargando...</span></p>
+            <p><strong>Cuerpo:</strong> <span id="soldado-cuerpo">Cargando...</span></p>
+            <p><strong>Compañía:</strong> <span id="soldado-compania">Cargando...</span></p>
+            <p><strong>Cuartel:</strong> <span id="soldado-cuartel">Cargando...</span></p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Mis Servicios Asignados</h2>
+        <ul id="lista-servicios">
+            <li>Cargando servicios...</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Cambiar Contraseña</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <input type="password" id="nuevo-password" placeholder="Nueva Contraseña">
+                <input type="password" id="confirmar-password" placeholder="Confirmar Contraseña">
+                <button id="btn-cambiar-password" class="btn">Actualizar</button>
+            </div>
+        </div>
+        <p id="mensaje-password" class="mensaje"></p>
+    </section>
+</main>
+
+<script src="script/shared.js"></script>
+<script src="script/menuSoldado.js"></script>
+</body>
+</html>

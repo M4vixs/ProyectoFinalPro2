@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Suboficial</title>
+    <link rel="stylesheet" href="css/menuOficial.css">
+</head>
+<body>
+
+<header class="header-menu">
+    <h1>Portal del Suboficial</h1>
+    <button id="btn-logout" class="btn btn-danger">Cerrar Sesión</button>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Mis Datos</h2>
+        <div id="datos-suboficial">
+            <p><strong>Nombre:</strong> <span id="sub-nombre">Cargando...</span></p>
+            <p><strong>Rol:</strong> <span id="sub-rol">Cargando...</span></p>
+            <p><strong>Cuartel:</strong> <span id="sub-cuartel">Cargando...</span></p>
+            <p><strong>Cuerpo:</strong> <span id="sub-cuerpo">Cargando...</span></p>
+            <p><strong>Compañía:</strong> <span id="sub-compania">Cargando...</span></p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Crear Nuevo Servicio</h2>
+        <div class="form-group">
+            <input type="text" id="nombre-servicio" placeholder="Nombre (ej. Guardia Nocturna)">
+            <input type="text" id="desc-servicio" placeholder="Descripción">
+            <button id="btn-crear-servicio" class="btn">Crear</button>
+        </div>
+        <p id="mensaje-servicio" class="mensaje"></p>
+    </section>
+
+    <section class="card">
+        <h2>Soldados a Cargo</h2>
+        <button id="btn-cargar-soldados" class="btn" style="margin-bottom: 15px;">Actualizar Lista</button>
+        <ul id="lista-soldados">
+            <li>Haz clic en actualizar para ver los soldados.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Asignar Servicio a Soldado/Suboficial</h2>
+        <div class="form-group">
+            <input type="number" id="asig-id-usuario" placeholder="ID del Usuario (Destino)">
+            <input type="number" id="asig-id-servicio" placeholder="ID del Servicio">
+            <button id="btn-asignar-servicio" class="btn">Asignar</button>
+        </div>
+        <p id="mensaje-asignar" class="mensaje"></p>
+    </section>
+
+    <section class="card">
+        <h2>Mis Servicios Asignados</h2>
+        <ul id="lista-servicios"><li>Cargando...</li></ul>
+    </section>
+
+    <section class="card">
+        <h2>Consultar Servicios de Usuario</h2>
+        <div class="form-group">
+            <input type="number" id="search-user-id" placeholder="ID de Usuario a consultar" style="flex-basis: 300px;">
+            <button id="btn-search-servicios" class="btn">Buscar</button>
+        </div>
+        <ul id="lista-servicios-busqueda" style="list-style-type: none; padding: 0;">
+        </ul>
+        <p id="mensaje-busqueda" class="mensaje"></p>
+    </section>
+</main>
+
+<script src="script/shared.js"></script>
+<script src="script/menuSuboficial.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* --- Configuración General (Modo Noche) --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2b2b2b; /* Fondo gris oscuro */
+    color: #e0e0e0; /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a; /* Fondo de header (más oscuro) */
+    color: white;
+    padding: 15px 30px;
+    border-bottom: 2px solid #555; /* Borde sutil */
+}
+
+.header-menu h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* --- Tarjetas (Cards) --- */
+.card {
+    background-color: #3c3c3c; /* Fondo de tarjeta (gris medio) */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #ffffff;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+/* --- Botones --- */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    background-color: #3498db; /* Azul */
+    color: white;
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Rojo */
+}
+
+.btn-danger:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+
+/* --- Formularios (Específico del Oficial) --- */
+.form-group {
+    display: flex;
+    flex-wrap: wrap; /* Para que se vea bien en móviles */
+    gap: 10px; /* Espacio entre inputs y botones */
+    padding: 15px 0;
+    border-bottom: 1px solid #555;
+}
+
+.form-group:last-child {
+    border-bottom: none;
+}
+
+.form-group input[type="text"] {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #777; /* Borde claro */
+    border-radius: 5px;
+    background-color: #2b2b2b; /* Mismo fondo del body */
+    color: #e0e0e0; /* Texto claro */
+}
+
+.form-group input[type="text"]::placeholder {
+    color: #999; /* Placeholder más claro */
+}
+
+/* --- Mensajes de Feedback --- */
+.mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Oculto por defecto */
+}
+
+/* (El JS puede agregar estas clases para mostrar éxito o error) */
+.mensaje-exito {
+    display: block;
+    background-color: #27ae60; /* Verde */
+    color: white;
+}
+
+.mensaje-error {
+    display: block;
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+}

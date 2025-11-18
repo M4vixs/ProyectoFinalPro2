@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Oficial</title>
+    <link rel="stylesheet" href="css/menuOficial.css">
+</head>
+<body>
+
+<header class="header-menu">
+    <h1>Portal del Oficial</h1>
+    <button id="btn-logout" class="btn btn-danger">Cerrar Sesión</button>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Mis Datos</h2>
+        <div id="datos-oficial">
+            <p><strong>Nombre:</strong> <span id="oficial-nombre">Cargando...</span></p>
+            <p><strong>Rol:</strong> <span id="oficial-rol">Cargando...</span></p>
+            <p><strong>Cuerpo:</strong> <span id="oficial-cuerpo">Cargando...</span></p>
+            <p><strong>Compañía:</strong> <span id="oficial-compania">Cargando...</span></p>
+            <p><strong>Cuartel:</strong> <span id="oficial-cuartel">Cargando...</span></p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Asignar Servicio a un Usuario</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <input type="text" id="id-usuario-servicio" placeholder="ID del Usuario">
+                <input type="text" id="id-servicio-asignar" placeholder="ID del Servicio">
+                <button id="btn-asignar-servicio" class="btn">Asignar Servicio</button>
+            </div>
+        </div>
+        <p id="mensaje-asignar" class="mensaje"></p> </section>
+
+    <section class="card">
+        <h2>Gestión de Entidades</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <input type="text" id="nombre-cuerpo" placeholder="Nombre del nuevo Cuerpo">
+                <button id="btn-crear-cuerpo" class="btn">Crear Cuerpo</button>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="nombre-cuartel" placeholder="Nombre del nuevo Cuartel">
+                <input type="text" id="ubicacion-cuartel" placeholder="Ubicación">
+                <button id="btn-crear-cuartel" class="btn">Crear Cuartel</button>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="nombre-compania" placeholder="Nombre de la nueva Compañía">
+                <button id="btn-crear-compania" class="btn">Crear Compañía</button>
+            </div>
+        </div>
+
+        <p id="mensaje-gestion" class="mensaje"></p> </section>
+
+
+
+    <section class="card">
+        <h2>Alta de Personal</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <input type="text" id="new-nombre" placeholder="Nombre">
+                <input type="text" id="new-apellido" placeholder="Apellido">
+            </div>
+            <div class="form-group">
+                <input type="email" id="new-email" placeholder="Email">
+                <input type="password" id="new-pass" placeholder="Contraseña Inicial">
+            </div>
+            <div class="form-group">
+                <select id="new-rol" style="padding: 10px; border-radius: 5px; flex: 1;">
+                    <option value="SOLDADO">Soldado</option>
+                    <option value="SUBOFICIAL">Suboficial</option>
+                    <option value="OFICIAL">Oficial</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" id="new-id-cuerpo" placeholder="ID Cuerpo">
+                <input type="number" id="new-id-compania" placeholder="ID Compañía">
+                <input type="number" id="new-id-cuartel" placeholder="ID Cuartel">
+            </div>
+            <button id="btn-crear-usuario" class="btn">Registrar Usuario</button>
+        </div>
+        <p id="mensaje-usuario" class="mensaje"></p>
+    </section>
+
+    <section class="card">
+        <h2>Mis Servicios Asignados</h2>
+        <ul id="lista-servicios"><li>Cargando...</li></ul>
+    </section>
+
+
+    <section class="card">
+        <h2>Consultar Servicios de Usuario</h2>
+        <div class="form-group">
+            <input type="number" id="search-user-id" placeholder="ID de Usuario a consultar" style="flex-basis: 300px;">
+            <button id="btn-search-servicios" class="btn">Buscar</button>
+        </div>
+        <ul id="lista-servicios-busqueda" style="list-style-type: none; padding: 0;">
+        </ul>
+        <p id="mensaje-busqueda" class="mensaje"></p>
+    </section>
+
+
+</main>
+
+<script src="script/shared.js"></script>
+<script src="script/menuOficial.js"></script>
+</body>
+</html>
